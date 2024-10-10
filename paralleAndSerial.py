@@ -36,22 +36,22 @@ print("the cluster centers of Parallel:", kmeans_parallel.cluster_centers_)
 # x_addis = data[['sepal_length', 'sepal_width']].sample(n=10).values
 x_addis, _ = make_blobs(n_samples=10, n_features=X.shape[1], centers=2, random_state=42)
 
-# Predict using the sequential model
+# Predict using the serial model
 st_time = time.time()  # start time 
 x_addis_dask = da.from_array(x_addis, chunks=(115, X.shape[1]))
-predictions_seq = kmeans_serial.predict(x_addis)
+predict_serial = kmeans_serial.predict(x_addis)
 predict_time_serial = time.time() - st_time  # end time of prediction
 
 # Predict using the parallel model
 st_time = time.time()  
 x_addis_dask = da.from_array(x_addis, chunks=(115, X.shape[1]))  # Convert new data to Dask array(da)
-predictions_parallel = kmeans_parallel.predict(x_addis_dask) 
+predictions_parallel = kmeans_parallel.predict(x_addis) 
 predict_time_parallel = time.time() - st_time  
 
 # Output the results of training and prediction
 print(f"serial Kmeans token Time: {seq_time:.2f} seconds")
 print(f"Parallel Kmeans token Time: {parallel_time:.2f} seconds")
-print("Predictions serial:", predictions_seq)
+print("Predictions serial:", predict_serial)
 print(f"Prediction time serial: {predict_time_serial:.4f} seconds") 
 print("Predictions in Parallel:", predictions_parallel)
 print(f"Prediction in paralle: {predict_time_parallel:.4f} seconds")   
