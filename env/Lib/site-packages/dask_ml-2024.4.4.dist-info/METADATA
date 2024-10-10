@@ -1,0 +1,125 @@
+Metadata-Version: 2.3
+Name: dask-ml
+Version: 2024.4.4
+Summary: A library for distributed and parallel machine learning
+Project-URL: Homepage, https://github.com/dask/dask-ml
+Author-email: Tom Augspurger <taugspurger@anaconda.com>
+License: Copyright (c) 2017, Anaconda, Inc. and contributors
+        All rights reserved.
+        
+        Redistribution and use in source and binary forms, with or without modification,
+        are permitted provided that the following conditions are met:
+        
+        Redistributions of source code must retain the above copyright notice,
+        this list of conditions and the following disclaimer.
+        
+        Redistributions in binary form must reproduce the above copyright notice,
+        this list of conditions and the following disclaimer in the documentation
+        and/or other materials provided with the distribution.
+        
+        Neither the name of Anaconda nor the names of any contributors may be used to
+        endorse or promote products derived from this software without specific prior
+        written permission.
+        
+        THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+        AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+        IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+        ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE
+        LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+        CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+        SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+        INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+        CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+        ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF
+        THE POSSIBILITY OF SUCH DAMAGE.
+License-File: LICENSE.txt
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Topic :: Database
+Classifier: Topic :: Scientific/Engineering
+Requires-Python: >=3.8
+Requires-Dist: dask-glm>=0.2.0
+Requires-Dist: dask[array,dataframe]>=2.4.0
+Requires-Dist: distributed>=2.4.0
+Requires-Dist: multipledispatch>=0.4.9
+Requires-Dist: numba>=0.51.0
+Requires-Dist: numpy>=1.20.0
+Requires-Dist: packaging
+Requires-Dist: pandas>=0.24.2
+Requires-Dist: scikit-learn>=1.2.0
+Requires-Dist: scipy
+Provides-Extra: complete
+Requires-Dist: dask-xgboost; extra == 'complete'
+Requires-Dist: xgboost; extra == 'complete'
+Provides-Extra: dev
+Requires-Dist: black; extra == 'dev'
+Requires-Dist: coverage; extra == 'dev'
+Requires-Dist: flake8; extra == 'dev'
+Requires-Dist: isort; extra == 'dev'
+Requires-Dist: nbsphinx; extra == 'dev'
+Requires-Dist: numpydoc; extra == 'dev'
+Requires-Dist: pytest; extra == 'dev'
+Requires-Dist: pytest-cov; extra == 'dev'
+Requires-Dist: pytest-mock; extra == 'dev'
+Requires-Dist: sphinx; extra == 'dev'
+Requires-Dist: sphinx-gallery; extra == 'dev'
+Requires-Dist: sphinx-rtd-theme; extra == 'dev'
+Provides-Extra: docs
+Requires-Dist: nbsphinx; extra == 'docs'
+Requires-Dist: numpydoc; extra == 'docs'
+Requires-Dist: sphinx; extra == 'docs'
+Requires-Dist: sphinx-gallery; extra == 'docs'
+Requires-Dist: sphinx-rtd-theme; extra == 'docs'
+Provides-Extra: test
+Requires-Dist: black; extra == 'test'
+Requires-Dist: coverage; extra == 'test'
+Requires-Dist: flake8; extra == 'test'
+Requires-Dist: isort; extra == 'test'
+Requires-Dist: pytest; extra == 'test'
+Requires-Dist: pytest-cov; extra == 'test'
+Requires-Dist: pytest-mock; extra == 'test'
+Provides-Extra: xgboost
+Requires-Dist: dask-xgboost; extra == 'xgboost'
+Requires-Dist: xgboost; extra == 'xgboost'
+Description-Content-Type: text/x-rst
+
+Dask-ML
+=======
+
+|Build Status| |Azure Pipelines| |Coverage| |Doc Status| |Discourse| |Version Status| |NumFOCUS|
+
+Dask-ML provides scalable machine learning in Python using `Dask <https://dask.org/>`__ alongside popular machine learning libraries like `Scikit-Learn <http://scikit-learn.org/>`__, `XGBoost <https://ml.dask.org/xgboost.html>`__, and others.
+
+You can try Dask-ML on a small cloud instance by clicking the following button:
+
+.. image:: https://mybinder.org/badge.svg
+   :target: https://mybinder.org/v2/gh/dask/dask-examples/main?filepath=machine-learning.ipynb
+
+LICENSE
+-------
+
+New BSD. See `License File <https://github.com/dask/dask-ml/blob/main/LICENSE.txt>`__.
+
+.. _documentation: https://dask.org
+.. |Build Status| image:: https://github.com/dask/dask-ml/workflows/CI/badge.svg?branch=main
+   :target: https://github.com/dask/dask-ml/actions?query=workflow%3A%22CI%22
+.. |Azure Pipelines| image:: https://dev.azure.com/dask-dev/dask/_apis/build/status/dask.dask-ml?branchName=main
+   :target: https://dev.azure.com/dask-dev/dask/_build/latest?definitionId=1&branchName=main
+.. |Coverage| image:: https://codecov.io/gh/dask/dask-ml/branch/main/graph/badge.svg
+   :target: https://codecov.io/gh/dask/dask-ml/branch/main
+   :alt: Coverage status
+.. |Doc Status| image:: https://readthedocs.org/projects/ml/badge/?version=latest
+   :target: https://ml.dask.org/
+   :alt: Documentation Status
+.. |Discourse| image:: https://img.shields.io/discourse/users?logo=discourse&server=https%3A%2F%2Fdask.discourse.group
+   :alt: Discuss Dask-related things and ask for help
+   :target: https://dask.discourse.group
+.. |Version Status| image:: https://img.shields.io/pypi/v/dask-ml.svg
+   :target: https://pypi.python.org/pypi/dask-ml/
+.. |NumFOCUS| image:: https://img.shields.io/badge/powered%20by-NumFOCUS-orange.svg?style=flat&colorA=E1523D&colorB=007D8A
+   :target: https://www.numfocus.org/

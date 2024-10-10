@@ -1,0 +1,55 @@
+Metadata-Version: 2.1
+Name: dask-glm
+Version: 0.3.2
+Summary: Generalized Linear Models with Dask
+Home-page: http://github.com/dask/dask-glm/
+Maintainer: Matthew Rocklin
+Maintainer-email: mrocklin@gmail.com
+License: BSD
+Keywords: dask,glm
+License-File: LICENSE.txt
+Requires-Dist: cloudpickle >=0.2.2
+Requires-Dist: dask[array]
+Requires-Dist: multipledispatch >=0.4.9
+Requires-Dist: scipy >=0.18.1
+Requires-Dist: scikit-learn >=0.18
+Requires-Dist: distributed
+Requires-Dist: sparse >=0.7.0
+Provides-Extra: docs
+Requires-Dist: jupyter ; extra == 'docs'
+Requires-Dist: nbsphinx ; extra == 'docs'
+Requires-Dist: notebook ; extra == 'docs'
+Requires-Dist: numpydoc ; extra == 'docs'
+Requires-Dist: sphinx ; extra == 'docs'
+Requires-Dist: sphinx-rtd-theme ; extra == 'docs'
+
+Generalized Linear Models in Dask
+=================================
+
+|Build Status| |Documentation Status|
+
+*This library is not ready for use.*
+
+See the `documentation`_ for more information.
+
+Developer Setup
+---------------
+Setup environment (from repo directory)::
+    
+    conda create env
+    source activate dask_glm
+    pip install -e .
+
+Run tests::
+
+    py.test
+
+
+
+.. |Build Status| image:: https://github.com/dask/dask-glm/workflows/CI/badge.svg
+   :target: https://github.com/dask/dask-glm/actions?query=workflow%3ACI
+
+.. |Documentation Status| image:: https://readthedocs.org/projects/dask-glm/badge/?version=latest
+   :target: http://dask-glm.readthedocs.io/en/latest/?badge=latest
+
+.. _documentation: http://dask-glm.readthedocs.io/en/latest/
